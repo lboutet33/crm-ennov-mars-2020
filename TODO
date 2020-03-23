@@ -1,6 +1,11 @@
 
 Todo:
   ✔ test unitaire @done(20-03-23 13:54)
-  ☐ architectured'une appli angular
-  ☐ montrer l'appli
+  ✔ architectured'une appli angular @done(20-03-23 17:15)
+  ✔ montrer l'appli @done(20-03-23 17:15)
+  ☐ recap journée d'hier
+  ☐ transclusion avec ng-content
+  ☐ life cycles
+  ☐ modules de l'application
+  ☐ pages de l'applic (agilité et perf)
 
