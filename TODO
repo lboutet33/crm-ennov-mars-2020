@@ -4,8 +4,8 @@ Todo:
   ✔ architectured'une appli angular @done(20-03-23 17:15)
   ✔ montrer l'appli @done(20-03-23 17:15)
   ✔ recap journée d'hier @done(20-03-24 09:12)
-  ☐ transclusion avec ng-content
-  ☐ life cycles
+  ✔ transclusion avec ng-content @done(20-03-24 11:02)
+  ✔ life cycles @done(20-03-24 11:36)
   ☐ modules de l'application
   ☐ pages de l'applic (agilité et perf)
 

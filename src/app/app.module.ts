@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { IconsModule } from './icons/icons.module';
 import { LayoutModule } from './layout/layout.module';
 import { UiModule } from './ui/ui.module';
+import { LoginModule } from './login/login.module';
 
 
 
@@ -16,12 +17,13 @@ import { UiModule } from './ui/ui.module';
   ],
   imports: [
     BrowserModule,
+    LoginModule,
     AppRoutingModule,
     UiModule,
     NgbModule,
     LayoutModule,
     IconsModule,
-    CoreModule
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
