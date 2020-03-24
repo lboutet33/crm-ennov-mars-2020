@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -6,9 +7,8 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { IconsModule } from './icons/icons.module';
 import { LayoutModule } from './layout/layout.module';
-import { UiModule } from './ui/ui.module';
 import { LoginModule } from './login/login.module';
-
+import { UiModule } from './ui/ui.module';
 
 
 @NgModule({
@@ -24,6 +24,7 @@ import { LoginModule } from './login/login.module';
     LayoutModule,
     IconsModule,
     CoreModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
