@@ -12,9 +12,9 @@ Todo:
   ✔ api json server @done(20-03-24 17:06)
   ✔ service presta avec http et observable @done(20-03-24 17:06)
   ✔ recap de la veille @done(20-03-25 09:26)
-  ☐ pipe json, currency, LOCAL ID, pipes personnalisés
+  ✔ pipe json, currency, LOCAL ID, pipes personnalisés @done(20-03-25 12:41)
   ☐ directive et directive personnalisée
-  ☐ appels de fonction dans le html (bonnes pratiques)
+  ✔ appels de fonction dans le html (bonnes pratiques) @done(20-03-25 12:42)
   ☐ components stupides et dynamiques
 
 
