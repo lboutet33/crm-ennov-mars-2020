@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { StatePrestation } from 'src/app/shared/enums/state-prestation.enum';
 import { Prestation } from 'src/app/shared/models/prestation';
 import { PrestationsService } from '../../services/prestations.service';
@@ -10,18 +11,30 @@ import { PrestationsService } from '../../services/prestations.service';
 })
 export class PageListPrestationsComponent implements OnInit {
   public headers: string[];
-  public collection: Prestation[];
+  public titre: string;
+  public soustitre: string;
+
+  public collection$: Observable<Prestation[]>;
   // public states = StatePrestation; => CODE 1
   public states = Object.values(StatePrestation); // => CODE 2 : permet de ne pas réordonner notre enum
 
   constructor(private ps: PrestationsService) { }
 
   ngOnInit(): void {
-    this.ps.collection.subscribe((datas) => {
-      this.collection = datas;
-      console.log(this.collection);
-    }) ;
-    this.headers = ['Type', 'Client', 'NbJours', 'TjmHT', 'Total HT', 'Total TTC', 'State'];
+    // this.ps.collection.subscribe((datas) => {
+    //   this.collection = datas;
+    // }) ;
+    this.collection$ = this.ps.collection;
+    this.headers = [
+      'Type',
+      'Client',
+      'NbJours',
+      'TjmHT',
+      'Total HT',
+      'Total TTC',
+      'State'];
+    this.titre = 'Prestations';
+    this.soustitre = 'Toutes les prestations';
   }
 
   changeState(item: Prestation, e) {

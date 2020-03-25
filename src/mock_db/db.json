@@ -7,7 +7,7 @@
       "tjmHt": 1200,
       "nbJours": 10,
       "tva": 20,
-      "state": "Annulé",
+      "state": "Confirmé",
       "comment": "Merci Modis pour les 1.2k jour"
     },
     {
@@ -16,7 +16,7 @@
       "tjmHt": 1200,
       "nbJours": 1,
       "tva": 20,
-      "state": "Option",
+      "state": "Annulé",
       "comment": "merci tonton",
       "id": 3
     },
@@ -26,7 +26,7 @@
       "tjmHt": 1200,
       "nbJours": 1,
       "tva": 20,
-      "state": "Confirmé",
+      "state": "Option",
       "comment": "merci tata",
       "id": 4
     }
