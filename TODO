@@ -6,6 +6,15 @@ Todo:
   ✔ recap journée d'hier @done(20-03-24 09:12)
   ✔ transclusion avec ng-content @done(20-03-24 11:02)
   ✔ life cycles @done(20-03-24 11:36)
-  ☐ modules de l'application
-  ☐ pages de l'applic (agilité et perf)
+  ✔ modules de l'application @done(20-03-24 17:04)
+  ✔ pages de l'applic (agilité et perf) @done(20-03-24 17:04)
+  ✔ enum, interface, model @done(20-03-24 17:06)
+  ✔ api json server @done(20-03-24 17:06)
+  ✔ service presta avec http et observable @done(20-03-24 17:06)
+  ✔ recap de la veille @done(20-03-25 09:26)
+  ☐ pipe json, currency, LOCAL ID, pipes personnalisés
+  ☐ directive et directive personnalisée
+  ☐ appels de fonction dans le html (bonnes pratiques)
+  ☐ components stupides et dynamiques
+
 

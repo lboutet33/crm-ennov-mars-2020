@@ -8,6 +8,7 @@ import { Prestation } from 'src/app/shared/models/prestation';
   styleUrls: ['./page-list-prestations.component.scss']
 })
 export class PageListPrestationsComponent implements OnInit {
+  public headers: string[];
   public collection: Prestation[];
   constructor(private ps: PrestationsService) { }
 
@@ -16,7 +17,7 @@ export class PageListPrestationsComponent implements OnInit {
       this.collection = datas;
       console.log(this.collection);
     }) ;
-
+    this.headers = ['Type','Client','NbJours', 'TjmHT', 'Total HT', 'Total TTC', 'State'];
   }
 
 }
