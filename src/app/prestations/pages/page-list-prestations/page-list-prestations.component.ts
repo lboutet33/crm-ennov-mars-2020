@@ -26,8 +26,10 @@ export class PageListPrestationsComponent implements OnInit {
   public btnLinkGoogle: BtnHref;
   public btnAction: BtnAction;
 
-  constructor(private ps: PrestationsService,
-              private route: ActivatedRoute) { }
+  constructor(
+    private ps: PrestationsService,
+    private route: ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
     this.btnAddPresta = {
