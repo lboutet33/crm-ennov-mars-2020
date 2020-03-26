@@ -13,8 +13,12 @@ Todo:
   ✔ service presta avec http et observable @done(20-03-24 17:06)
   ✔ recap de la veille @done(20-03-25 09:26)
   ✔ pipe json, currency, LOCAL ID, pipes personnalisés @done(20-03-25 12:41)
-  ☐ directive et directive personnalisée
+  ✔ directive et directive personnalisée @done(20-03-26 09:31)
   ✔ appels de fonction dans le html (bonnes pratiques) @done(20-03-25 12:42)
-  ☐ components stupides et dynamiques
+  ✔ components stupides et dynamiques @done(20-03-26 09:31)
+  ☐ data dans router
+  ☐ components stupides encapsulés avec styles selon template
+  ☐ @Output() ex avec btn
+  ☐ formulaires
 
 
