@@ -11,6 +11,7 @@ import { LoginModule } from './login/login.module';
 import { UiModule } from './ui/ui.module';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { PageListClientsComponent } from './clients/pages/page-list-clients/page-list-clients.component';
 
 // the second parameter 'fr-FR' is optional
 registerLocaleData(localeFr, 'fr-FR');

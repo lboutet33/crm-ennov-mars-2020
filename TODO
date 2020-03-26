@@ -18,7 +18,13 @@ Todo:
   ✔ components stupides et dynamiques @done(20-03-26 09:31)
   ✔ data dans router @done(20-03-26 10:44)
   ✔ components stupides encapsulés avec styles selon template @done(20-03-26 10:44)
-  ☐ @Output() ex avec btn
-  ☐ formulaires
+  ✔ @Output() ex avec btn @done(20-03-26 17:02)
+  ✔ formulaires @done(20-03-26 17:02)
+  ☐ delete d'une prestation
+  ☐ edit prestation (route avec id dans url) operateur switchmap rxjs
+  ☐ exemple de BehaviorSUbject => différence entre l'injection en private et en public (afficher n° version)
+  ☐ evaluation formateur en ligne
+  ☐ exemple route enfants avec une sous navigation dans la page list prestations Subject and BehaviorSubject
+
 
 
