@@ -1,0 +1,4 @@
+<a [routerLink]="route" *ngIf="route" >{{ texte }}</a>
+<a [href]="href" *ngIf="href">{{texte}}</a>
+<a *ngIf="action" (click)="onAction()">{{texte}}</a>
+

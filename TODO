@@ -16,8 +16,8 @@ Todo:
   ✔ directive et directive personnalisée @done(20-03-26 09:31)
   ✔ appels de fonction dans le html (bonnes pratiques) @done(20-03-25 12:42)
   ✔ components stupides et dynamiques @done(20-03-26 09:31)
-  ☐ data dans router
-  ☐ components stupides encapsulés avec styles selon template
+  ✔ data dans router @done(20-03-26 10:44)
+  ✔ components stupides encapsulés avec styles selon template @done(20-03-26 10:44)
   ☐ @Output() ex avec btn
   ☐ formulaires
 
