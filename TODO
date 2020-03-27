@@ -21,7 +21,7 @@ Todo:
   ✔ @Output() ex avec btn @done(20-03-26 17:02)
   ✔ formulaires @done(20-03-26 17:02)
   ✔ delete d'une prestation @done(20-03-27 10:14)
-  ☐ edit prestation (route avec id dans url) operateur switchmap rxjs
+  ✔ edit prestation (route avec id dans url) operateur switchmap rxjs @done(20-03-27 12:15)
   ☐ exemple de BehaviorSUbject => différence entre l'injection en private et en public (afficher n° version)
   ☐ evaluation formateur en ligne
   ☐ exemple route enfants avec une sous navigation dans la page list prestations Subject and BehaviorSubject

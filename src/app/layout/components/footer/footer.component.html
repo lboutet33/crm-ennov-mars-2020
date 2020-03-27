@@ -1,1 +1,4 @@
-<p>footer works!</p>
+<!-- <span>v.{{ u.version }} - </span> -->
+<span *ngIf="version$ | async as version">v.{{ version }} - </span>
+
+<!-- <h1><span *ngIf="version$ | async as version">v.{{ version }} - </span>{{ title }}</h1> -->
