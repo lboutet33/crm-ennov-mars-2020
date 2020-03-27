@@ -1,0 +1,7 @@
+<app-template-a [title]="titre" [subtitle]="soustitre">
+
+  <div class="container">
+    <!-- form presta ne sera rempli que si "item$ | async" n'est pas null : -->
+    <app-form-presta *ngIf="item$ | async as item" [item]="item" (nItem)="update($event)"></app-form-presta>
+  </div>
+</app-template-a>

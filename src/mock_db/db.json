@@ -22,14 +22,24 @@
       "id": 3
     },
     {
-      "typePresta": "bvcxbvxc",
-      "client": "bvcxbvxcbx",
+      "typePresta": "test modif bla",
+      "client": "test 11",
       "tjmHt": 1200,
       "nbJours": 1,
       "tva": 20,
       "state": "Option",
       "comment": null,
       "id": 4
+    },
+    {
+      "id": 5,
+      "typePresta": "tyty",
+      "client": "tyty",
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "Option",
+      "comment": null
     }
   ],
   "clients": [

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { StatePrestation } from 'src/app/shared/enums/state-prestation.enum';
 import { Prestation } from 'src/app/shared/models/prestation';
@@ -12,7 +12,7 @@ import { Prestation } from 'src/app/shared/models/prestation';
 export class FormPrestaComponent implements OnInit {
   public states = Object.values(StatePrestation);
   public form: FormGroup;
-  private item = new Prestation();
+  @Input() item = new Prestation(); // @Input permet d'y accéder depuis le composant parent pour faire du propertybinding
   @Output() private nItem: EventEmitter<Prestation> = new EventEmitter<Prestation>();
   constructor(
     private fb: FormBuilder
@@ -20,6 +20,7 @@ export class FormPrestaComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group({
+      id: [this.item.id], //vaudra null à l'utilisation sur le formulaire add...sinon on aura la valeur en mode edit
       typePresta: [
         this.item.typePresta,
         Validators.required
@@ -37,6 +38,6 @@ export class FormPrestaComponent implements OnInit {
   }
 
   public onSubmit() {
-    this.nItem.emit(this.form.value);
+    this.nItem.emit(this.form.value); // on a 1 objet complet avec l'ID
   }
 }

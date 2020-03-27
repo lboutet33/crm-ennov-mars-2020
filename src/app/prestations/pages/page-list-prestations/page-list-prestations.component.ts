@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 import { StatePrestation } from 'src/app/shared/enums/state-prestation.enum';
 import { BtnAction } from 'src/app/shared/interfaces/btn-action';
 import { BtnHref } from 'src/app/shared/interfaces/btn-href';
@@ -28,7 +28,8 @@ export class PageListPrestationsComponent implements OnInit {
 
   constructor(
     private ps: PrestationsService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -92,5 +93,9 @@ export class PageListPrestationsComponent implements OnInit {
       }
 
     );
+  }
+
+  public onEdit(item: Prestation) {
+    this.router.navigate(['prestations', 'edit', item.id]);
   }
 }

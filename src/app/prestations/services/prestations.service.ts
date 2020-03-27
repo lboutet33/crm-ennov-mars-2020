@@ -79,4 +79,12 @@ export class PrestationsService {
   }
 
   // get item by id
+  public getItemById(id: string): Observable<Prestation> {
+    return this.http.get<Prestation>(`${this.urlApi}prestations/${id}`)
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    );
+  }
+
 }
