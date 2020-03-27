@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { StatePrestation } from 'src/app/shared/enums/state-prestation.enum';
 import { BtnAction } from 'src/app/shared/interfaces/btn-action';
 import { BtnHref } from 'src/app/shared/interfaces/btn-href';
@@ -18,7 +18,7 @@ export class PageListPrestationsComponent implements OnInit {
   public titre: string;
   public soustitre: string;
 
-  public collection$: Observable<Prestation[]>;
+  public collection$: BehaviorSubject<Prestation[]> = new BehaviorSubject(null);// observable chaud initialisée avec null pour gérer le refresh auto après delete par ex
   // public states = StatePrestation; => CODE 1
   public states = Object.values(StatePrestation); // => CODE 2 : permet de ne pas réordonner notre enum
 
@@ -48,7 +48,12 @@ export class PageListPrestationsComponent implements OnInit {
     // this.ps.collection.subscribe((datas) => {
     //   this.collection = datas;
     // }) ;
-    this.collection$ = this.ps.collection;
+
+    // this.ps.collection.subscribe(); // 1 premier subscribe qui permet dans le service de mettre à jour this.collection (qui fait le map + le tap et modifie le flux de données du behaviorsubject collection$)
+    this.ps.collection.subscribe((col) => {
+      this.collection$.next(col);
+    });
+    //this.collection$ = this.ps.collection$;
     this.headers = [
       'Type',
       'Client',
@@ -56,7 +61,8 @@ export class PageListPrestationsComponent implements OnInit {
       'TjmHT',
       'Total HT',
       'Total TTC',
-      'State'
+      'State',
+      'delete'
     ];
     this.route.data.subscribe((datas) => {
       this.titre = datas.title;
@@ -75,5 +81,16 @@ export class PageListPrestationsComponent implements OnInit {
   public openPopup() {
     console.log('popup active');
 
+  }
+
+  delete(item: Prestation) {
+    this.ps.delete(item).subscribe(
+      (res) => {
+        this.ps.collection.subscribe((col) => {
+          this.collection$.next(col);
+        });
+      }
+
+    );
   }
 }

@@ -6,6 +6,7 @@ import { FormPrestaComponent } from './components/form-presta/form-presta.compon
 import { PageAddPrestationComponent } from './pages/page-add-prestation/page-add-prestation.component';
 import { PageListPrestationsComponent } from './pages/page-list-prestations/page-list-prestations.component';
 import { PrestationsRoutingModule } from './prestations-routing.module';
+import { IconsModule } from '../icons/icons.module';
 
 
 

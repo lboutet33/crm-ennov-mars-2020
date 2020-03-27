@@ -30,7 +30,7 @@ export class PageAddPrestationComponent implements OnInit {
     console.log(item);
     this.ps.add(item).subscribe((res) => {
       // traitement de la réponse de l'API
-      //this.router.navigate(['prestations']); // chemin direct
+      // this.router.navigate(['prestations']); // chemin direct
       this.router.navigate(['../'], {relativeTo: this.route}); // chemin de relatif
     });
 

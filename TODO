@@ -20,7 +20,7 @@ Todo:
   ✔ components stupides encapsulés avec styles selon template @done(20-03-26 10:44)
   ✔ @Output() ex avec btn @done(20-03-26 17:02)
   ✔ formulaires @done(20-03-26 17:02)
-  ☐ delete d'une prestation
+  ✔ delete d'une prestation @done(20-03-27 10:14)
   ☐ edit prestation (route avec id dans url) operateur switchmap rxjs
   ☐ exemple de BehaviorSUbject => différence entre l'injection en private et en public (afficher n° version)
   ☐ evaluation formateur en ligne

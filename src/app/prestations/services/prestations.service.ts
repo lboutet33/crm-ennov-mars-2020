@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { map, retry, catchError } from 'rxjs/operators';
+import { BehaviorSubject, Observable, throwError } from 'rxjs';
+import { catchError, map, retry, tap } from 'rxjs/operators';
+import { StatePrestation } from 'src/app/shared/enums/state-prestation.enum';
 import { Prestation } from 'src/app/shared/models/prestation';
 import { environment } from 'src/environments/environment';
-import { StatePrestation } from 'src/app/shared/enums/state-prestation.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -69,8 +69,14 @@ export class PrestationsService {
     return throwError(errorMessage);
   }
 
-
   // delete idem
+  public delete(item: Prestation) {
+    return this.http.delete(`${this.urlApi}prestations/${item.id}`)
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    );
+  }
 
   // get item by id
 }
