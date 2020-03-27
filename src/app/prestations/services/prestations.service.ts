@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, throwError, Subject } from 'rxjs';
 import { catchError, map, retry, tap } from 'rxjs/operators';
 import { StatePrestation } from 'src/app/shared/enums/state-prestation.enum';
 import { Prestation } from 'src/app/shared/models/prestation';
@@ -12,9 +12,11 @@ import { environment } from 'src/environments/environment';
 export class PrestationsService {
   private pCollection: Observable<Prestation[]>;
   private urlApi = environment.urlApi;
+  public item$: BehaviorSubject<Prestation> = new BehaviorSubject(null);
   constructor(private http: HttpClient) {
     this.collection = this.http.get<Prestation[]>(`${this.urlApi}prestations`).pipe(
       map((tab) => {
+        this.item$.next(tab[0]);
         return tab.map((obj) => {
           return new Prestation(obj);
         });

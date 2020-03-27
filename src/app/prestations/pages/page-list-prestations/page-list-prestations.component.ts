@@ -63,7 +63,8 @@ export class PageListPrestationsComponent implements OnInit {
       'Total HT',
       'Total TTC',
       'State',
-      'delete'
+      'delete',
+      'info'
     ];
     this.route.data.subscribe((datas) => {
       this.titre = datas.title;
@@ -97,5 +98,9 @@ export class PageListPrestationsComponent implements OnInit {
 
   public onEdit(item: Prestation) {
     this.router.navigate(['prestations', 'edit', item.id]);
+  }
+
+  public info(item: Prestation) {
+    this.ps.item$.next(item);
   }
 }
